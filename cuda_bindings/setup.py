@@ -303,5 +303,7 @@ setup(
     version=versioneer.get_version(),
     ext_modules=do_cythonize(extensions),
     cmdclass=cmdclass,
+    include_package_data=True,
+    package_data={"cuda": ["*.pyx", "*.pxd"]},
     zip_safe=False,
 )
